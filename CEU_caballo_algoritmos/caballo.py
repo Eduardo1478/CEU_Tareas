@@ -17,7 +17,6 @@ def possibleMoves(tablero, position, remaining_moves):
         
     return count
 
-
 tablero = [[1, 1, 1],
           [1, 1, 1],
           [1, 1, 1],
@@ -31,7 +30,7 @@ for row in range(len(tablero)):
     for column in range(len(tablero[row])):
         if (tablero[row][column] == 1):
             total_moves += possibleMoves(tablero, [row, column], remaining_moves)   
-        
+                  
 print(total_moves)
 
 
