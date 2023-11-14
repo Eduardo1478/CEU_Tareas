@@ -13,25 +13,25 @@ naves_espaciales = [
     },
     {
         "nombre": "Cometa Veloz",
-        "longitud": 60,
+        "longitud": 70,
         "tripulantes": 12,
         "pasajeros": 25
     },
      {
         "nombre": "Delta",
-        "longitud": 60,
+        "longitud": 90,
         "tripulantes": 12,
         "pasajeros": 127
     },
      {
         "nombre": "Titán del Cosmos",
-        "longitud": 60,
+        "longitud": 65,
         "tripulantes": 10,
         "pasajeros": 47
     },
      {
         "nombre": "GX Luftansa",
-        "longitud": 60,
+        "longitud": 200,
         "tripulantes": 232,
         "pasajeros": 5
     }
@@ -78,3 +78,24 @@ print("Naves que empiezan con GX: ")
 for nave in naves_espaciales:
     if nave["nombre"].startswith("GX"):
         print(nave)
+print("\n")
+
+
+print("Naves que pueden llevar 6 o mas pasajeros: ")
+for nave in naves_espaciales:
+    if nave["pasajeros"] >= 6:
+        print(nave["nombre"])
+print("\n")
+
+
+naves_ordenadas_por_longitud = sorted(naves_espaciales, key=lambda x: x["longitud"])
+print("Nave mas pequeña: ")
+for nave in naves_ordenadas_por_longitud[:1]:
+    print(nave["nombre"])
+print("\n")
+
+naves_ordenadas_por_longitud = sorted(naves_espaciales, key=lambda x: x["longitud"], reverse=True)
+print("Nave mas grande: ")
+for nave in naves_ordenadas_por_longitud[:1]:
+    print(nave["nombre"])
+print("\n")
